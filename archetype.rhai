@@ -18,13 +18,13 @@ context += prompt("Project Prefix:", "project-prefix", #{
     ],
 });
 
-context += set("project-name", render("{{ project-prefix }}-{{ org-name }}-{{ venture-name }}", context), #{
+context += set("project-name", render("{{ project-prefix }}-{{ org-name }}-{{ solution-name }}", context), #{
     cases: [
         CasedIdentityCasedValue(PROGRAMMING_CASES),
     ],
 });
 
-context += set("project-name", render("{{ project-prefix }}-{{ org-name }}-{{ venture-name }}", context), #{
+context += set("project-name", render("{{ project-prefix }}-{{ org-name }}-{{ solution-name }}", context), #{
     cases: [
         CasedIdentityCasedValue(PROGRAMMING_CASES),
         FixedKeyCasedValue("project-title", TitleCase),
